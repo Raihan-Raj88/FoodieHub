@@ -94,9 +94,7 @@ const LoginPage = () => {
           Don't have an account? <Link to="/register">Sign up</Link>
         </p>
 
-        <p className="demo-hint">
-          Demo Admin: <strong>admin@foodiehub.com</strong> / <strong>admin123</strong>
-        </p>
+
       </div>
     </div>
   );

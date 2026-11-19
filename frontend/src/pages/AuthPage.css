@@ -86,12 +86,3 @@
 
 .auth-footer a:hover { text-decoration: underline; }
 
-.demo-hint {
-  text-align: center;
-  margin-top: 16px;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  background: #fff5f2;
-  padding: 10px;
-  border-radius: var(--radius-sm);
-}
