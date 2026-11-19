@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { NavLink, useNavigate, Outlet } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { NavLink, useNavigate, Outlet, useLocation } from 'react-router-dom';
 import {
   MdDashboard, MdFastfood, MdCategory, MdShoppingBag,
   MdPeople, MdLogout, MdMenu, MdClose
@@ -19,7 +19,13 @@ const NAV_ITEMS = [
 const AdminLayout = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  // Scroll to top on admin page change
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [location.pathname]);
 
   const handleLogout = () => {
     logout();
